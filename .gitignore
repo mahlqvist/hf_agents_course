@@ -3,8 +3,9 @@
 *$py.class 
 
 # Environments
-venv/
-env/
+hf_env/
+.venv/
+.env/
 
 
 # Configuration Files
