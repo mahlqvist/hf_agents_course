@@ -1,6 +1,6 @@
 # Hugging Face Agents Course Notes
 
-Welcome to my repository for the [Hugging Face Agents Course]((https://huggingface.co/learn/agents-course/)).
+Welcome to my repository for the [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/).
 
 This repo contains:
 - **Course Notes** – Summaries, key takeaways and explanations from the course.
