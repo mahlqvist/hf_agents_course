@@ -1,4 +1,4 @@
-# Introductions to LLMs
+# Introduction to LLMs
 
 An **Agent** needs an **AI Model** at its core and **LLMs** are the most common type of AI models for this purpose.
 
