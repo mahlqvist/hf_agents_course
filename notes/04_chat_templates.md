@@ -62,17 +62,14 @@ rendered_prompt = tokenizer.apply_chat_template(
 
 This `apply_chat_template()` function **formats everything** so that the AI gets exactly what it needs to generate a proper response.  
 
-### Why Should You Care? 
-
-If you’re building anything with AI, whether it's a chatbot, an assistant or an API—you **need** chat templates to make sure your AI:  
+If you’re building anything with AI, whether it's a chatbot, an assistant or an API, you **need** chat templates to make sure your AI:  
 - Understands the full conversation.  
 - Knows what role it’s supposed to play.  
 - Follows the right structure for its specific model type.  
 
 Without chat templates, your AI might **misinterpret** messages, forget context or just output garbage. With them, it becomes a **structured, intelligent conversationalist**.  
 
-### Summary 
-
+So in summary:
 - **Chat Templates** organize conversations so AI models can understand and respond correctly.  
 - **Messages are structured** with system, user and assistant roles.  
 - **Base models** predict text, while **Instruct models** are trained to follow commands.  
