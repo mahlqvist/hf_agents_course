@@ -25,7 +25,12 @@ On Windows the path will look like:
 C:\Users\username\AppData\Roaming\jupyter\kernels\myenv
 ```
 
+Optional: install `ipywidgets`, which is a python library that provides interactive html-widgets for Jupyter notebooks and JupyterLab. For example, the `tqdm` library is used for displaying progress bars, by installing `ipywidgets`, you enable `tqdm` to use the more advanced **IProgress widget**, improving the user experience in Jupyter notebooks and you won't get warnings about it.
+
 ```bash
+# to install ipywidgets
+pip install ipywidgets
+
 # to list the kernels
 jupyter kernelspec list
 
