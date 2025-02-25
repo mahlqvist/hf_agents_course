@@ -1,12 +1,12 @@
-# AI Agent Workflow
+# Workflow
 
-Alright, let's explore the complete AI Agent Workflow, a cycle defined as the **Thought-Action-Observation** cycle.
+Alright, let's explore the **AI Agent Workflow**, a cycle defined as the **Thought-Action-Observation** cycle.
 
-Imagine you're a detective. Not just any detective, a smart AI detective. Your job? Solve a case. But how do you do it? You follow a simple loop, **Think - Act - Observe**.  
+Imagine you're a detective. Not just any detective, a smart AI detective. Your job? Solve a case. But how do you do it? You follow a simple loop, **Think-Act-Observe**.  
 
 ### The Thought
 
-Before making a move, you need to decide what to do next. You analyze the situation, consider your options, and pick the best step. This is where your brain, your **LLM (Large Language Model)** comes in.  
+Before making a move, you need to decide what to do next. You analyze the situation, consider your options, and pick the best step. This is where your brain, the **LLM** comes in.  
 
 **Example:** "*Hmm... I need to find the missing cat. Should I check the backyard or ask the neighbor?*"  
 
@@ -24,9 +24,11 @@ After taking an action, you get new information. Maybe the camera shows the cat 
 
 ### The Loop
 
-This is **AI's** "*While True*" Moment, the **Thought - Action - Observation** cycle. This doesn't just happen once, it loops! Just like a detective keeps investigating until they crack the case, an AI agent keeps looping until it reaches its goal.  
+This is **AI's** **While True** moment, the **Thought-Action-Observation** cycle, because this doesn't just happen once, it loops! Just like a detective keeps investigating until they crack the case, an AI agent keeps looping until it reaches its goal.  
 
 ```python
+not_solved = True
+
 while not_solved:
     think()  # Decide next step
     act()    # Take action

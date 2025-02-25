@@ -1,32 +1,44 @@
 # Introduction to LLMs
 
-An **Agent** needs an **AI Model** at its core and **LLMs** are the most common type of AI models for this purpose.
+An **Agent** needs a **model** at its core and a **Large Language Model** is the most common type used for this purpose.
 
 So, what is a **Large Language Model**?  
 
 Imagine you're talking to someone who has read *every book, article and internet post* available up until a certain point in time. This person doesn't have opinions or real understanding like most humans, but this person is ridiculously good at predicting what words *should* come next in a sentence.  
 
-That's a **Large Language Model**, a giant pattern-matching machine that has seen so much text that it can predict what *probably* makes sense next.  
+That's a **Large Language Model**, a giant pattern-matching machine, that has seen so much text that it can predict what *probably* makes sense next.  
 
 The model has been trained on tons of data, books, wikipedia, blogs and conversations. It doesn't memorize them like a parrot, but instead, it learns the *relationships* between words, sentences and ideas.  
 
 For example, if it sees enough sentences like:  
-- "The cat sat on the ___."  
-- "I like to eat ___ for breakfast."  
+- "*The cat sat on the ___.*"  
+- "*I like to eat ___ for breakfast.*"  
 
-It starts figuring out that `"mat"` or `"floor"` might come after `"sat on the"`, while `"pancakes"` or `"cereal"` might come after `"like to eat"`. This is called **learning probabilities**, it doesn't *know* what a cat is or what pancakes really are, but it knows how these words are typically used and how people typically use them together.  
+It starts figuring out that the word `"mat"` or `"floor"` might come after `"The cat sat on the"`, while `"pancakes"` or `"cereal"` might come after `"I like to eat"`. This is called **learning probabilities**. Even though the model doesn't know what a cat is or what pancakes really are, it knows how these words are typically used and how people typically use them together.  
 
 The problem is, if you just read words one by one, that's not very effective. Imagine reading an entire book, but you only remember *one word at a time*. You'd be clueless about what's happening.  
 
 ### Transformer Architecture
 
-The **transformer architecture** is a trick that lets the model look at **many words at once** (sometimes even an entire paragraph). It figures out which words are important by using something called **attention**, it can focus on key parts of a sentence, just like you focus on important details when reading.  
+A **Transformer** is a special type of **neural network architecture** designed to handle sequences of data, like sentences, paragraphs or even entire documents.
+
+So, the **Transformer Architecture** lets the model look at **many words at once** (sometimes even an entire paragraph). It figures out which words are important by using something called **Attention**, meaning it can focus on key parts of a sentence, just like you focus on important details when reading.  
+
+
+Imagine you're solving a mystery and you have a team of detectives. Each detective is responsible for understanding one part of the story, but they all share information with each other. Some detectives focus on the characters, others on the timeline and others on the motives. By pooling their knowledge, they can solve the mystery much more effectively.
+
+Transformers work the same way. Each "*detective*" (attention head) focuses on a different aspect of the input sequence and by combining their insights, the model can understand the sequence as a whole.
+
+<p align="center">
+  <img src="../media/attention.png" width="600">
+</p>
+
 
 For example, in the sentence:  
 - *"The bank by the river flooded last night."*  
 - *"I deposited money at the bank."*  
 
-The model **knows** that `"bank"` means different things in each case because of the surrounding words. This is why **transformers** are so powerful, they don't just read words in order, they look at everything **at the same time** and decide which words matter most.  
+By using **Attention**, the model **knows** that `"bank"` means different things in each case because of the surrounding words. This is why **transformers** are so powerful, they don't just read words in order, they look at everything **at the same time** and decide which words matter most.  
 
 When people say an **LLM** has millions or billions of **parameters**, think of those as tiny dials that have been adjusted while training. Each parameter represents a tiny **piece of learned knowledge**, about how words relate to each other.  
 
@@ -57,9 +69,7 @@ Even thought it feels like **intelligence**, it's really just math and probabili
 
 The model doesn't "*understand*" language like humans do, but still can generate surprisingly **coherent, useful and even creative** texts. That's because human language itself follows patterns that can be learned!
 
-### Types of Transformers
-
-There are 3 types of transformers:
+### Three Types of Transformers
 
 **1 - Encoders** are like a super readers, takes in a sentence and deeply understands its meaning. Imagine you're reading a book and underlining key ideas to understand its meaning. The encoder does this by turning words into **rich numerical representations** called **embeddings**. 
 
@@ -101,7 +111,12 @@ A **decoder** produces **token IDs** (numbers corresponding to words or subwords
 
 For example, while English has an estimated 600,000 words, an LLM might have a vocabulary of around 32,000 tokens (as is the case with Llama 2). Tokenization often works on sub-word units that can be combined.
 
-So each LLM has some special tokens specific to the model and the most important of those is the **end of sequence** token (**EOS**).
+Each LLM has some **special tokens** specific to the model and the most important of those is the **end of sequence** token (**EOS**).
+
+|Model|Provider      |EOS Token       |Functionality     |
+|:----|:-------------|:--------------:|:-----------------|
+|GPT4 |OpenAI        |<\|endoftext\|> |End of message    |
+|SmolLM2|Hugging Face|<\|im_end\|>    |End of instruction|
 
 **SentencePiece** is a special type of tokenizer that doesn't rely on spaces to split words. Instead, it treats text as a raw stream of characters and learns the best way to break it into tokens.
 
@@ -120,7 +135,7 @@ This means the model understands that "un" means "not" and even if the model has
 
 ### Next Token prediction
 
-The text representation (tokenization) goes into the model, which outputs scores that rank the likelihood of each token in its vocabulary as being the next one in the sequence.
+The text representation (**tokenization**) goes into the model, which outputs scores that rank the likelihood of each token in its vocabulary as being the next one in the sequence.
 
 The easiest decoding strategy would be to always take the **token with the maximum score**.
 

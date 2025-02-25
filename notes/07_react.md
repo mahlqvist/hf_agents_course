@@ -2,7 +2,7 @@
 
 The **Re-Act** approach is a way to guide a language model to think more carefully before acting. It's like giving the model a little nudge to say, "*Hey, don't just blurt out the first thing that comes to mind, take a moment, break it down and reason through it step by step*". This helps the model avoid mistakes and come up with better, more thoughtful answers.
 
-The name **Re-Act** comes from **Reasoning** and **Acting**. First, the model *reasons* (thinks through the problem) and then it *acts* (provides an answer or solution). It's like how you'd solve a physics problem, you don't just write down the answer, you think about the principles, work through the equations and then arrive at the solution.
+The name **Re-Act** comes from **Reasoning** and **Acting**. First, the model **reasons** (thinks through the problem) and then it **acts** (provides an answer or solution). It's like how you'd solve a physics problem, you don't just write down the answer, you think about the principles, work through the equations and then arrive at the solution.
 
 **LLM**s are trained on a lot of data and they're really good at predicting what comes next in a sequence of words. But sometimes, they can jump to conclusions or make mistakes because they're not explicitly trained to "*think*" before they "*speak*”. The **Re-Act** approach forces the model to slow down and simulate a more deliberate thought process.
 

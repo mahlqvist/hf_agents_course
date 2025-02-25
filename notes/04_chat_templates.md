@@ -1,6 +1,8 @@
 # Chat Templates
 
-Ever wondered how you can have a back-and-forth conversation with ChatGPT? The AI isn't *really* chatting, it's just looking at a pile of text and predicting the next word.  
+Let's have a look at how **LLM**s structure their generations through chat templates.
+
+Ever wondered how you can have a back-and-forth conversation with ChatGPT? The AI isn't really chatting, the model is just looking at a pile of text and predicting the next word.  
 
 So how does it **keep track of a conversation**?  
 
@@ -21,10 +23,10 @@ messages = [
 This is what’s **actually** happening behind the scenes.  
 
 - The **system message** tells the AI how to behave (like "You are a math tutor").  
-- The **user message** is what you type in.  
+- The **user message** is what you type in, your query.  
 - The **assistant message** is what the AI responds with.  
 
-The AI doesn't "remember" past messages in the way humans do, it just gets fed **a single big text chunk** containing the conversation history, every time you send a message.  
+The AI doesn't "*remember*" past messages in the way humans do, it just gets fed **a single big text chunk** containing the conversation history, every time you send a message.  
 
 ### Base Models vs Instruct Models  
 
@@ -67,11 +69,11 @@ If you’re building anything with AI, whether it's a chatbot, an assistant or a
 - Knows what role it’s supposed to play.  
 - Follows the right structure for its specific model type.  
 
-Without chat templates, your AI might **misinterpret** messages, forget context or just output garbage. With them, it becomes a **structured, intelligent conversationalist**.  
+Without chat templates, your AI might **misinterpret** messages, forget context or just output garbage. With them, it becomes a **structured**, **intelligent** conversationalist.  
 
 So in summary:
 - **Chat Templates** organize conversations so AI models can understand and respond correctly.  
-- **Messages are structured** with system, user and assistant roles.  
+- **Messages** are structured with **system**, **user** and **assistant** roles.  
 - **Base models** predict text, while **Instruct models** are trained to follow commands.  
 - **Each model has different formatting rules** and chat templates apply the correct one automatically.  
 - **Use `apply_chat_template()`** to make sure your chatbot talks the way it should!  
