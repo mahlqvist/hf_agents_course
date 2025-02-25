@@ -22,7 +22,7 @@ Let's say you want to solve a math problem. Here's how you might structure a **R
    - So, I need to divide 300 miles by 5 hours to find the average speed.
 
 2. **Acting:**  
-   - Let's do the math: \(\frac{\text{300 miles}}{\text{5 hours}} = 60\) miles per hour.  
+   - Let's do the math: $\frac{\text{300 miles}}{\text{5 hours}} = 60$ miles per hour.  
    - Therefore, the train's average speed is **60 miles per hour**.
 
 ### Why This Works
