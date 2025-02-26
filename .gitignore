@@ -3,7 +3,7 @@
 *$py.class 
 
 # Environments
-hf_env/
+hf_agents/
 .venv/
 .env/
 
