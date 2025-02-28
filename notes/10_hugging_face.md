@@ -1,8 +1,8 @@
 # Hugging Face
 
-Since I never used Hugging Face before this course, a question popped while installing the `huggingface_hub` library, what's the Hugging Face Hub?
+Since I never really used Hugging Face before this course, a question popped while installing the `huggingface_hub` library, what's the Hugging Face Hub?
 
-Hugging Face is like **GitHub for Machine Learning (ML)**, but with extra superpowers. It's a platform where people share, collaborate and build machine learning models, datasets and applications. But unlike GitHub, which is mostly for code, Hugging Face is specifically designed for ML workflows.
+**Hugging Face** is like **GitHub for Machine Learning**, but with extra superpowers. It's a platform where people share, collaborate and build machine learning models, datasets and applications. But unlike GitHub, which is mostly for code, Hugging Face is specifically designed for ML workflows.
 
 Here's what makes Hugging Face special:
 
