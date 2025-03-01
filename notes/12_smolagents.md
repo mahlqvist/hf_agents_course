@@ -9,15 +9,14 @@ def my_custom_search_tool(usr_query:str)-> str:
     Args:
         usr_query: a string representing the user query
     """
-
-    # Initialize the search tool
-    search_tool = DuckDuckGoSearchTool()
-
-    result = search_tool(usr_query)
-
-    if not result:
-        return "No relevant results found!"
-    return result
+    try:
+        # Initialize the search tool
+        search_tool = DuckDuckGoSearchTool()
+        
+        result = search_tool(usr_query)
+        return result
+    except Exception as e:
+        return f"Error: {e}"
 ``` 
 
 To use the image generation tool I guess you need a hugging face token.
