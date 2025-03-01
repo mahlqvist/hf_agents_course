@@ -1,21 +1,23 @@
 # Your First Agent
 
-This was pretty awesome. Since DuckDuckGoSearchTool was alread imported, it became my first custom tool.
+This was pretty awesome. Since `DuckDuckGoSearchTool` was alread imported, it became my first custom tool.
 
 ```python
 @tool
 def my_custom_search_tool(usr_query:str)-> str:
-    """A tool to perform a web search of the user query and awnser based on that web search
+    """A tool to perform a web search based on user query and answer based on result
     Args:
-        usr_query: a string representing the users query
+        usr_query: a string representing the user query
     """
+
+    # Initialize the search tool
     search_tool = DuckDuckGoSearchTool()
 
-    results = search_tool(usr_query)
+    result = search_tool(usr_query)
 
-    if not results:
+    if not result:
         return "No relevant results found!"
-    return results
+    return result
 ``` 
 
 To use the image generation tool I guess you need a hugging face token.
@@ -35,7 +37,7 @@ image_generation_tool = load_tool(
 )
 ``` 
 
-Finally, just add the tools to the list of tools inside `CodeAgent()`.
+Finally, just add the tools to the list of tools inside `CodeAgent`.
 
 ```python
 agent = CodeAgent(
